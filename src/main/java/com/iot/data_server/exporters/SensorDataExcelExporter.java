@@ -86,7 +86,7 @@ public class SensorDataExcelExporter {
         writeHeaderLine();
         writeDataLines();
 
-        FileOutputStream outputStream = new FileOutputStream("JavaBooks.xlsx");
+        FileOutputStream outputStream = new FileOutputStream("exported.xlsx");
         workbook.write(outputStream);
         workbook.close();
 
