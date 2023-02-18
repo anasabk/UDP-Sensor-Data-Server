@@ -19,10 +19,10 @@ public class DataEntity {
 
     LocalTime sentAt;
     private float x_accel;
-    private float y_accel;
-    private float z_accel;
     private float x_gyro;
+    private float y_accel;
     private float y_gyro;
+    private float z_accel;
     private float z_gyro;
     private float tempr;
 }
