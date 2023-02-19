@@ -41,12 +41,12 @@ public class UDPServer implements MessageHandler {
                 Float.parseFloat(split[8])
         );
 
-        System.out.print(data.toString() + i + "\n");
+//        System.out.print(data.toString() + i + "\n");
 
         sensorDataService.saveData(data);
 
         i++;
-        if(i == 200) {
+        if(i == 100) {
             i = 0;
             System.out.print(MILLIS.between(time, LocalTime.now()) + " milliseconds\n");
             time = LocalTime.now();
