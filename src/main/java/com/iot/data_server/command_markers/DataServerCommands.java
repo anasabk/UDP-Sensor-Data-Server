@@ -23,8 +23,14 @@ public class DataServerCommands {
         SensorDataExcelExporter excelExporter = new SensorDataExcelExporter(dataEntityList);
         excelExporter.export();
     }
+    
     @ShellMethod(value = "Clear database")
     public void clearData() {
         sensorDataService.clearData();
+    }
+    
+    @ShellMethod(value = "Exit the application")
+    public void exit() {
+        exit();
     }
 }

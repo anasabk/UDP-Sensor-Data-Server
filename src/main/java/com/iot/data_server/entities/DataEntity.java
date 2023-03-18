@@ -3,7 +3,7 @@ package com.iot.data_server.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalTime;
+import java.util.Date;
 
 @Entity
 @AllArgsConstructor
@@ -15,12 +15,12 @@ public class DataEntity {
     @Column(name = "id")
     private Long id;
 
-    LocalTime sentAt;
+    Date sentAt;
     private float x_accel;
-    private float x_gyro;
     private float y_accel;
-    private float y_gyro;
     private float z_accel;
+    private float x_gyro;
+    private float y_gyro;
     private float z_gyro;
     private float tempr;
 
@@ -67,13 +67,7 @@ public class DataEntity {
         if(tempr >= 0.0)
             sb.append(" ");
         sb.append(String.format("%2.4f", tempr));
-
-//        sb.append(", x_gyro =").append(String.format("%2.4f", ));
-//        sb.append(", y_accel=").append(String.format("%2.4f", y_accel));
-//        sb.append(", y_gyro =").append(String.format("%2.4f", y_gyro));
-//        sb.append(", z_accel=").append(String.format("%2.4f", z_accel));
-//        sb.append(", z_gyro =").append(String.format("%2.4f", z_gyro));
-//        sb.append(", tempr  =").append(String.format("%2.4f", tempr));
+        
         sb.append('}');
         return sb.toString();
     }
